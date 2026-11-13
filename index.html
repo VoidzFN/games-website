@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101114" />
+    <meta name="description" content="A bright little arcade of free, original games you can play right in your browser." />
+    <title>Playroom — little games, big fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Playroom home"><span class="brand-icon">✳</span> playroom<span class="brand-period">.</span></a>
+      <nav class="topnav" aria-label="Main navigation"><a href="#games">Games</a><a href="#about">About</a></nav>
+      <a class="top-cta" href="#games">Find a game <span>↘</span></a>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> YOUR NEXT FIVE-MINUTE BREAK</div>
+          <h1>A little play<br />goes a <span>long way.</span></h1>
+          <p class="hero-description">A cozy corner of the internet for quick games, tiny challenges, and one-more-round energy.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#games">Explore the games <span>↗</span></a><span class="no-download">No downloads. Just play.</span></div>
+        </div>
+        <div class="hero-art" aria-label="Colorful arcade illustration">
+          <div class="art-sun"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-star star-one">✦</div><div class="art-star star-two">✳</div>
+          <div class="art-game-card"><div class="art-card-top"><span>PLAYER 01</span><span class="tiny-hearts">♥ ♥ ♥</span></div><div class="art-board"><span>◉</span><span>✦</span><span>◆</span><span>✿</span><span>◈</span><span>✷</span><span>▲</span><span>●</span><span>✚</span></div><div class="art-card-bottom"><span>READY WHEN YOU ARE</span><span>▶</span></div></div>
+          <div class="floating-tag tag-left">GOOD VIBES ONLY</div><div class="floating-tag tag-right">PRESS START ✦</div>
+        </div>
+      </section>
+
+      <section class="games-section" id="games">
+        <div class="section-heading"><div><div class="eyebrow section-eyebrow">THE ARCADE</div><h2>Pick your next <span>favorite.</span></h2></div><div class="game-count"><span id="gameCount">05</span> GAMES & COUNTING</div></div>
+        <div class="toolbar"><div class="filters" role="group" aria-label="Filter games"><button class="filter active" data-filter="All">All games <span>05</span></button><button class="filter" data-filter="Puzzle">Puzzle</button><button class="filter" data-filter="Arcade">Arcade</button><button class="filter" data-filter="Classic">Classic</button></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a game..." aria-label="Search games" /><kbd>/</kbd></label></div>
+        <div class="game-grid" id="gameGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>No games found. Try another search.</div>
+      </section>
+
+      <section class="play-section" id="playSection" aria-live="polite" hidden>
+        <div class="play-heading"><div><div class="eyebrow section-eyebrow">NOW PLAYING</div><h2 id="playTitle">Game</h2></div><button class="close-button" id="closeGame" type="button">Back to games <span>×</span></button></div>
+        <div class="game-frame" id="gameFrame"></div>
+      </section>
+
+      <section class="about-section" id="about"><div class="about-mark">✳</div><div><div class="eyebrow section-eyebrow">A SMALL NOTE</div><h2>Made for a little <span>joy break.</span></h2><p>Playroom is a collection of original mini-games made for this page. Pick one, take a breath, and have fun.</p></div><a class="back-top" href="#home">Back to top ↑</a></section>
+    </main>
+    <footer><a class="brand footer-brand" href="#home"><span class="brand-icon">✳</span> playroom<span class="brand-period">.</span></a><span>Made for fun, played in your browser.</span><span>© <span id="year"></span> Playroom</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
